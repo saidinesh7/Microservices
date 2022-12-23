@@ -1,0 +1,17 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: COMMENT_SERVICE
+  datasource:
+    url: jdbc:mysql://localhost:3306/commentdb
+    username: root
+    password: 70367
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+

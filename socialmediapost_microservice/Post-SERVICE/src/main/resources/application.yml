@@ -1,0 +1,18 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: POST_SERVICE
+  datasource:
+    url: jdbc:mysql://localhost:3306/postdb
+    username: root
+    password: 70367
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      database-platform: org.hibernate.dialect.MySQLDialect
+
+
