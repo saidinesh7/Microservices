@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: GATEWAY_SERVICE
+  cloud:
+    gateway:
+      routes:
+        - id: USER-SERVICE
+          uri: http://localhost:8081/
+          predicates:
+            - Path= /user/**
+
+
+        - id: POST_SERVICE
+          uri: http://localhost:8082/
+          predicates:
+            - Path= /post/**
+
+
+        - id: COMMENT_SERVICE
+          uri: http://localhost:8083/
+          predicates:
+            - Path= /comment/**
+
+server:
+  port: 8084
